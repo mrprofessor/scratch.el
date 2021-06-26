@@ -18,9 +18,6 @@
 ;; Make ESC quit prompts
 (global-set-key  (kbd "<escape>") 'keyboard-escape-quit)
 
-;; Display line numbers
-(global-display-line-numbers-mode t)
-
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initialize package sources
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -79,8 +76,3 @@
          ("C-d" . ivy-reverse-i-search-kill))
   :init
   (ivy-mode 1))
-
-(use-package doom-modeline
-  :ensure t
-  :init (doom-modeline-mode 1)
-  :custom ((doom-modeline-height 30)))
