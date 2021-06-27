@@ -1,0 +1,24 @@
+* Notes
+
+Some useful notes while building my emacs confing.
+
+*** End of file during parsing error
+
+If there is a syntax error, emacs complains about it without being specific.
+
+1. Use =M-x check-parens RET= to pinpoint the location of the current error.
+2. Also enable =show-paren-mode= to see which parenthesis matches the current one.
+
+*** Break long lilnes
+
+1. Set =truncate-line= to =nil= for all buffers or any specific buffer.
+#+BEGIN_SRC elisp
+;; For all buffers
+(setq truncate-lines nil)
+
+;; For a specific buffer
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+#+END_SRC
+
+
+2. Use =M-x fill-paragraph= to break long lines into multiple short ones. (short-cut =M-q=)
