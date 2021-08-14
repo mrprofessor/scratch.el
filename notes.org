@@ -22,3 +22,9 @@ If there is a syntax error, emacs complains about it without being specific.
 
 
 2. Use =M-x fill-paragraph= to break long lines into multiple short ones. (short-cut =M-q=)
+
+*** Eval on tiny-buffer
+Use =M-:= to quickly eval some elisp
+
+*** Unset a key
+    =(global-unset-key (kbd "C-M-j"))=
